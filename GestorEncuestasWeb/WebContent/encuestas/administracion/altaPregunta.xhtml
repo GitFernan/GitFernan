@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+	<h:body>
+		#{tareasAdministracion.establecerTarea("Pregunta")}
+		Estado de tarea : #{tareasAdministracion.tarea}<br></br>
+		<fieldset>
+			<f:view locale="#{facesContext.externalContext.requestLocale}">
+				<h:outputFormat value="#{msgs.mensajeBienvenida}" >
+					<f:param value="#{userBean.user.nombreCompleto}"></f:param>
+					<f:param value="#{userBean.user.domicilio.domicilioCompleto}"></f:param>
+				</h:outputFormat>
+			</f:view>
+		</fieldset>
+		<a href="/GestorEncuestasWeb/encuestas/administracion/altaEncuesta.jsf">Ir a Nueva Pregunta</a><br></br>
+		<a href="/GestorEncuestasWeb/encuestas/administracion/administracionIndex.jsf">Volver a Administración</a>
+	</h:body>
+</html>
